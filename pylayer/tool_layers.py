@@ -262,7 +262,7 @@ class det_nms_layer(caffe.Layer):
 
 
 
-MAX_LEN = cfg.MAX_LEN
+#MAX_LEN = cfg.MAX_LEN
 class gen_gts_layer(caffe.Layer):
     """
     bottom[0]: gt_label [N,1,sz,sz]

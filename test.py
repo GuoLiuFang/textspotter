@@ -3,6 +3,9 @@ sys.path.insert(0, './pylayer')
 sys.path.insert(0, './caffe/python')
 from tool import is_image, load_dict, vec2word, build_voc, write2txt_icdar15_e2e, contain_num, contain_symbol, \
     non_max_suppression
+# $DISPLAY problems
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import argparse
 import os
@@ -322,7 +325,7 @@ if __name__ == '__main__':
             write2txt_icdar15_e2e(out_name, temp_boxes, temp_words)
 
             ### show results
-            plt.imshow(im)
+            #plt.imshow(im)
             # print image_resize_width, image_resize_height
             currentAxis = plt.gca()
             colors = plt.cm.hsv(np.linspace(0, 1, 21)).tolist()
